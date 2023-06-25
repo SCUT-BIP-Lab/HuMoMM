@@ -1,10 +1,9 @@
 # HuMoMM: A Multi-Modal Dataset and Benchmark for Human Motion Analysis
 
 This is the official repository of paper:
-```
-HuMoMM: A Multi-Modal Dataset and Benchmark for Human Motion Analysis
-Xiong Zhang, Minghui Wang, Ming Zeng, Wenxiong Kang*, and Feiqi Deng
-```
+
+>HuMoMM: A Multi-Modal Dataset and Benchmark for Human Motion Analysis  
+>Xiong Zhang, Minghui Wang, Ming Zeng, Wenxiong Kang*, and Feiqi Deng
 
 
 ## Abstract
