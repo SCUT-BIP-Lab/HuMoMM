@@ -1,0 +1,31 @@
+parent: "config/vis3d/o3d_scene.yml"
+
+body_model:
+  module: "easymocap.smplmodel.body_model.SMPLlayer"
+  args:
+    _no_merge_: True
+    model_path: "data/smplx/smpl"
+    model_type: "smpl"
+    gender: "neutral"
+    device: "cpu"
+    regressor_path: "data/smplx/J_regressor_body25.npy"
+
+scene:
+  "easymocap.visualize.o3dwrapper.create_coord":
+    camera: [0, 0, 0]
+    radius: 0.2
+    scale: 0.2
+  "easymocap.visualize.o3dwrapper.create_bbox":
+    min_bound: [-3, -3, 0]
+    max_bound: [3, 3, 2]
+    flip: False
+  "easymocap.visualize.o3dwrapper.create_ground":
+    center: [0, 1.2, 0]
+    xdir: [1, 0, 0]
+    ydir: [0, 0, 1]
+    step: 1
+    xrange: 3
+    yrange: 3
+    white: [1., 1., 1.]
+    black: [0.,0.,0.]
+    two_sides: True

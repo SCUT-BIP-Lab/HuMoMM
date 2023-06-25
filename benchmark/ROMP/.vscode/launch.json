@@ -1,0 +1,49 @@
+{
+    // 使用 IntelliSense 了解相关属性。 
+    // 悬停以查看现有属性的描述。
+    // 欲了解更多信息，请访问: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Python: romp.train",
+            "type": "python",
+            "request": "launch",
+            "module": "romp.train",
+            "env": {
+                "PYTHONPATH": "${env:PYTHONPATH}:${workspaceFolder}",
+                // "CUDA_VISIBLE_DEVICES": "1"
+            },
+            "args": [
+                "--configs_yml",
+                "configs/v1_scut_mp.yml"
+            ],
+            "justMyCode": true
+        },
+        {
+            "name": "Python: romp.test",
+            "type": "python",
+            "request": "launch",
+            "module": "romp.test",
+            "env": {
+                "PYTHONPATH": "${env:PYTHONPATH}:${workspaceFolder}",
+                "CUDA_VISIBLE_DEVICES": "1"
+            },
+            "args": [
+                "--configs_yml=configs/eval_3dpw_test.yml",
+            ],
+            "justMyCode": true
+        },
+        {
+            "name": "Python: romp.dataset.test",
+            "type": "python",
+            "request": "launch",
+            "module": "romp.lib.dataset.scut_3dhp",
+            "env": {
+                "PYTHONPATH": "${env:PYTHONPATH}:${workspaceFolder}",
+                "CUDA_VISIBLE_DEVICES": "1"
+            },
+            "justMyCode": true
+        },
+
+    ]
+}

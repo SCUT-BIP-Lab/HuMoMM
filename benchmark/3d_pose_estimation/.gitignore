@@ -1,0 +1,24 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# ignore checkpoint
+checkpoint/
+
+# ignore data
+*.npz
+*.zip
+data/custom/
+
+# ignore vecode
+.vscode/
+
+# ignore hydra output
+outputs/
+
+*.bin
+*.svg

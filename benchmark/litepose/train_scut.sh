@@ -1,0 +1,1 @@
+CUDA_VISIBLE_DEVICES=1 python dist_train.py --cfg experiments/scut/mobilenet/supermobile_xaction.yaml --gpu 1

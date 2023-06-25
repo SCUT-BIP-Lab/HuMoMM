@@ -1,0 +1,17 @@
+src/
+trained_models/
+models/
+demo/videos/
+demo/animation/
+model_data/
+# romp/
+demo/*_results*/
+active_configs/*
+configs/*_self.yml
+build/
+dist/
+*.egg-info/
+.eggs/
+__pycache__/
+demo/images/
+log/*

@@ -1,0 +1,317 @@
+{
+    // 使用 IntelliSense 了解相关属性。 
+    // 悬停以查看现有属性的描述。
+    // 欲了解更多信息，请访问: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Python: mv1p.py",
+            "type": "python",
+            "request": "launch",
+            "program": "apps/demo/mv1p.py",
+            "args": [
+                "tmp/vis_smpl_seq6",
+                "--out",
+                "tmp/vis_smpl_seq6/output",
+                "--body",
+                "smpl",
+                "--vis_repro",
+                "--vis_smpl",
+                "--opt_cam"
+            ],
+            "console": "integratedTerminal",
+            "env": {
+                "PYTHONPATH": "${env:PYTHONPATH}:${workspaceFolder}",
+                "CUDA_VISIBLE_DEVICES": "1"
+            },
+            "justMyCode": true
+        },
+        {
+            "name": "Python: vis_smpl.py",
+            "type": "python",
+            "request": "launch",
+            "program": "tools/vis_smpl.py",
+            "args": [
+                "tmp/sequence",
+                "--out",
+                "tmp/sequence/output",
+                "--body",
+                "smpl",
+                "--vis_repro",
+                "--vis_smpl",
+                "--opt_cam"
+            ],
+            "console": "integratedTerminal",
+            "env": {
+                "PYTHONPATH": "${env:PYTHONPATH}:${workspaceFolder}",
+                "CUDA_VISIBLE_DEVICES": "1"
+            },
+            "justMyCode": true
+        },
+        {
+            "name": "Python: generate_smpl_label.py",
+            "type": "python",
+            "request": "launch",
+            "program": "tools/generate_smpl_label.py",
+            "args": [
+                "--data_root",
+                "/data/pose_datasets/scut2",
+                "--output_root",
+                "/data/pose_datasets/scut2_bak/SMPL",
+                "--cam_param_path",
+                "~/human_pose_estimation/rgbd_3d_human_pe/dataset_label_op_code/cam_param/cam_param_2/cam_param_pkg.npz"
+            ],
+            "console": "integratedTerminal",
+            "env": {
+                "PYTHONPATH": "${env:PYTHONPATH}:${workspaceFolder}",
+                "CUDA_VISIBLE_DEVICES": "1"
+            },
+            "justMyCode": true
+        },
+        {
+            "name": "Python: Current File",
+            "type": "python",
+            "request": "launch",
+            "program": "${file}",
+            "console": "integratedTerminal",
+            "env": {
+                "PYTHONPATH": "${env:PYTHONPATH}:${workspaceFolder}",
+            },
+            "justMyCode": true
+        },
+        {
+            "name": "Python: mvmp.py",
+            "type": "python",
+            "request": "launch",
+            "program": "apps/demo/mvmp.py",
+            "args": [
+                "tmp/vis_smpl_mp4",
+                "--out",
+                "tmp/vis_smpl_mp4/output",
+                "--cfg",
+                "config/exp/my_mvmp1f.yml",
+                "--annot",
+                "annots",
+                "--body",
+                "smpl",
+                "--undis",
+                "--vis_repro",
+                "--vis_det",
+            ],
+            "console": "integratedTerminal",
+            "env": {
+                "PYTHONPATH": "${env:PYTHONPATH}:${workspaceFolder}",
+                "CUDA_VISIBLE_DEVICES": "1"
+            },
+            "justMyCode": true
+        },
+        {
+            "name": "Python: auto_track.py",
+            "type": "python",
+            "request": "launch",
+            "program": "apps/demo/auto_track.py",
+            "args": [
+                "tmp/vis_smpl_mp4/output",
+                "tmp/vis_smpl_mp4/output-track",
+                "--track3d",
+                "--body",
+                "smpl"
+            ],
+            "console": "integratedTerminal",
+            "env": {
+                "PYTHONPATH": "${env:PYTHONPATH}:${workspaceFolder}",
+                "CUDA_VISIBLE_DEVICES": "1"
+            },
+            "justMyCode": true
+        },
+        {
+            "name": "Python: smpl_from_keypoints.py",
+            "type": "python",
+            "request": "launch",
+            "program": "apps/demo/smpl_from_keypoints.py",
+            "args": [
+                "tmp/vis_smpl_mp4",
+                "--skel",
+                "tmp/vis_smpl_mp4/output-track/keypoints3d",
+                "--out",
+                "tmp/vis_smpl_mp4/output-track/smpl",
+                "--body",
+                "smpl",
+                // "--verbose",
+                "--vis_smpl",
+                "--opt",
+                "smooth_poses",
+                "1e0"
+                // "1e1"
+            ],
+            "console": "integratedTerminal",
+            "env": {
+                "PYTHONPATH": "${env:PYTHONPATH}:${workspaceFolder}",
+                "CUDA_VISIBLE_DEVICES": "1"
+            },
+            "justMyCode": true
+        },
+        {
+            "name": "Python: generate_smpl_label_mp.py",
+            "type": "python",
+            "request": "launch",
+            "program": "tools/generate_smpl_label_mp.py",
+            "args": [
+                "--data_root",
+                "/data/pose_datasets/scut2_mp",
+                "--output_smpl_root",
+                "/data/pose_datasets/scut2_mp/SMPL",
+                "--cam_param_path",
+                "~/human_pose_estimation/rgbd_3d_human_pe/dataset_label_op_code/cam_param/cam_param_2/cam_param_pkg.npz"
+            ],
+            "console": "integratedTerminal",
+            "env": {
+                "PYTHONPATH": "${env:PYTHONPATH}:${workspaceFolder}",
+                "CUDA_VISIBLE_DEVICES": "1"
+            },
+            "justMyCode": true
+        },
+        {
+            "name": "Python: mvmp.py body21",
+            "type": "python",
+            "request": "launch",
+            "program": "apps/demo/mvmp.py",
+            "args": [
+                "tmp/seq_mp",
+                "--out",
+                "tmp/seq_mp/output",
+                "--cfg",
+                "config/exp/my_mvmp1f_body21.yml",
+                "--annot",
+                "annots",
+                "--body",
+                "body21",
+                "--undis",
+                "--vis_repro",
+                "--vis_det",
+            ],
+            "console": "integratedTerminal",
+            "env": {
+                "PYTHONPATH": "${env:PYTHONPATH}:${workspaceFolder}",
+                "CUDA_VISIBLE_DEVICES": "1"
+            },
+            "justMyCode": true
+        },
+        {
+            "name": "Python: auto_track.py body21",
+            "type": "python",
+            "request": "launch",
+            "program": "apps/demo/auto_track.py",
+            "args": [
+                "tmp/seq_mp/output",
+                "tmp/seq_mp/output-track",
+                "--track3d",
+                "--body",
+                "body21",
+            ],
+            "console": "integratedTerminal",
+            "env": {
+                "PYTHONPATH": "${env:PYTHONPATH}:${workspaceFolder}",
+                "CUDA_VISIBLE_DEVICES": "1"
+            },
+            "justMyCode": true
+        },
+        {
+            "name": "Python: vis_track_repro.py body21",
+            "type": "python",
+            "request": "launch",
+            "program": "apps/demo/vis_track_repro.py",
+            "args": [
+                "tmp/seq_mp2",
+                "--out",
+                "tmp/seq_mp2/output-track",
+                "--body",
+                "body21",
+            ],
+            "console": "integratedTerminal",
+            "env": {
+                "PYTHONPATH": "${env:PYTHONPATH}:${workspaceFolder}",
+                "CUDA_VISIBLE_DEVICES": "1"
+            },
+            "justMyCode": true
+        },
+        {
+            "name": "Python: save_track_repro.py body21",
+            "type": "python",
+            "request": "launch",
+            "program": "apps/demo/save_track_repro.py",
+            "args": [
+                "tmp/sequence",
+                "--out",
+                "tmp/sequence/output-track",
+                "--body",
+                "body21",
+            ],
+            "console": "integratedTerminal",
+            "env": {
+                "PYTHONPATH": "${env:PYTHONPATH}:${workspaceFolder}",
+                "CUDA_VISIBLE_DEVICES": "1"
+            },
+            "justMyCode": true
+        },
+        {
+            "name": "Python: generate_3d_joints_mp.py",
+            "type": "python",
+            "request": "launch",
+            "program": "tools/generate_3d_joints_mp.py",
+            "args": [
+                "--data_root",
+                "/data/pose_datasets/scut2_mp",
+                "--output_joint_root",
+                "/data/pose_datasets/scut2_mp/Label_3d",
+                "--cam_param_path",
+                "~/human_pose_estimation/rgbd_3d_human_pe/dataset_label_op_code/cam_param/cam_param_2/cam_param_pkg.npz"
+            ],
+            "console": "integratedTerminal",
+            "env": {
+                "PYTHONPATH": "${env:PYTHONPATH}:${workspaceFolder}",
+                "CUDA_VISIBLE_DEVICES": "1"
+            },
+            "justMyCode": true
+        },
+        {
+            "name": "Python: generate_2d_3d_joints_mp.py",
+            "type": "python",
+            "request": "launch",
+            "program": "tools/generate_2d_3d_joints_mp.py",
+            "args": [
+                "--data_root",
+                "/data/pose_datasets/scut2_mp",
+                "--output_2d_joint_root",
+                "/data/pose_datasets/scut2_mp/Label",
+                "--output_joint_root",
+                "/data/pose_datasets/scut2_mp/Label_3d",
+                "--cam_param_path",
+                "~/human_pose_estimation/rgbd_3d_human_pe/dataset_label_op_code/cam_param/cam_param_2/cam_param_pkg.npz"
+            ],
+            "console": "integratedTerminal",
+            "env": {
+                "PYTHONPATH": "${env:PYTHONPATH}:${workspaceFolder}",
+                "CUDA_VISIBLE_DEVICES": "1"
+            },
+            "justMyCode": true
+        },
+        {
+            "name": "Python: mocap.py",
+            "type": "python",
+            "request": "launch",
+            "program": "apps/demo/mocap.py",
+            "args": [
+                "tmp/1v1p",
+                "--work",
+                "internet"
+            ],
+            "console": "integratedTerminal",
+            "env": {
+                "PYTHONPATH": "${env:PYTHONPATH}:${workspaceFolder}",
+                "CUDA_VISIBLE_DEVICES": "1"
+            },
+            "justMyCode": true
+        },
+    ]
+}

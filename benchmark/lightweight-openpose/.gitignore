@@ -1,0 +1,12 @@
+*.pyc
+__pycache__
+.idea/
+.vscode/
+images/
+checkpoints/
+pretrained_models/
+coco_data/
+logs/
+tmp/
+results/
+data/
