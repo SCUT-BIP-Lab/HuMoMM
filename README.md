@@ -14,6 +14,17 @@ Human motion analysis is a fundamental task in computer vision, and there is an 
 ## Dataset
 The HuMoMM Dataset is publicly available(free of charge) to the research community. Unfortunately, due to privacy reasons, we cannot provide the database for commercial use. If you are interested in obtaining the HuMoMM dataset, you should download [release agreement](./assets/HuMoMM%20Release%20Agreement.docx), and send by e-mail one signed and scanned copy to scutbip@outlook.com.
 
+While reporting results using the HuMoMM Dataset, please cite the following article:
+
+@inproceedings{Zhang2023HuMoMM,
+  title={HuMoMM: A Multi-Modal Dataset and Benchmark for Human Motion Analysis},
+  author={Zhang, Xiong and Wang, Minghui and Zeng, Ming and Kang, Wenxiong and Deng, Feiqi},
+  booktitle={Image and Graphics: 11th International Conference, ICIG 2023, Nangjing, China},
+  pages={},
+  year={2023},
+  organization={Springer}
+}
+
 ## Toolchain
 We develop a toolchain for generating multi-modal motion annotations, the toolchain is released in [toolchain](./toolchain). For more details of the toolchain, please refer to [toolchain.md](./toolchain/README.md).
 
