@@ -12,7 +12,7 @@ Human motion analysis is a fundamental task in computer vision, and there is an 
 ![multi_modal](./assets/multi_modal.jpg)
 
 ## Dataset
-The HuMoMM Dataset is publicly available(free of charge) to the research community. Unfortunately, due to privacy reasons, we cannot provide the database for commercial use. If you are interested in obtaining the HuMoMM dataset, you should download [release agreement](./assets/HuMoMM%20Release%20Agreement.docx), and send by e-mail one signed and scanned copy to scutbip@outlook.com.
+The HuMoMM Dataset is publicly available(free of charge) to the research community. Unfortunately, due to privacy reasons, we cannot provide the database for commercial use. If you are interested in obtaining the HuMoMM dataset, you should download [release agreement](./HuMoMM%20Release%20Agreement.docx), and send by e-mail one signed and scanned copy to scutbip@outlook.com.
 
 While reporting results using the HuMoMM Dataset, please cite the following article:
 
